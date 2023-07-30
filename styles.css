@@ -1,0 +1,61 @@
+.parent{
+    background-color: blue;
+    width: 50vw;
+    height: 70vh;
+}
+
+.child{
+    background-color: red;
+    width: 20vw;
+    height: 30vh;
+    border-radius: 50%;
+    /* transition:transform 1s ease-in-out ; */
+}
+
+.parent:hover .child{
+    /* transform:translateY(100%); */
+    animation: anim 1s ease-in 0.5 ;
+    
+}
+@keyframes anim{
+    100%{
+        transform: translateX(100%);
+    }
+
+}
+
+.scale{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.col{
+    background-color: rgb(65, 65, 65);
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+    animation:anime2 2s ease-in 10000 alternate;
+}
+.col2{
+    background-color: rgb(48, 48, 48);
+    width:200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    animation:anime 1s ease-in-out 10000 alternate;
+}
+
+@keyframes anime{
+    100%{
+        transform: scale(0.5);
+    }
+}@keyframes anime2{
+    100%{
+        transform: scale(0.7);
+    }
+}
+/* transition propertyis written in the base class */
+/* animation property is written in the hover class */
